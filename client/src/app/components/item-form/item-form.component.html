@@ -1,0 +1,47 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <p>Nombre del Producto</p>
+                    <input type="text" name="nombre" [(ngModel)]="item.nombre" placeholder="Nombre del Producto" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <p>Descripcion del Producto</p>
+                    <textarea name="descripcion" [(ngModel)]="item.descripcion" placeholder="Descripcion del Producto" rows="2" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <p>Precio del Producto</p>
+                    <input type="number" name="Precio" [(ngModel)]="item.precio" placeholder="Precio del Producto" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <p>Stock del Producto</p>
+                    <input type="number" name="Stock" [(ngModel)]="item.stock" placeholder="Stock Disponible" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <p>Imagen del Producto</p>
+                    <input type="url" name="imagen" [(ngModel)]="item.imagen" placeholder="Imagen del Producto" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <p>Categoria del Producto</p>
+                    <select class="form-select form-select mb-3" name="categoria" [(ngModel)]="item.id_Categoria" [disabled]="item.id_Categoria !== 0">
+                      <option *ngFor="let category of categorias" [value]="category.id">{{ category.nombre }}</option>
+                    </select>  
+                </div>
+                <p>Guardar Producto</p>
+                <button class="btn btn-success btn-block" (click) = "edit ? updateItem() : saveNewItem()">
+                    GUARDAR
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="item.imagen == '' ? '/assets/Default.png' : item.imagen" class="card-img-top">
+        <h3>{{item.id}}. {{item.nombre == '' ? 'Nombre del Producto': item.nombre}}</h3>
+        <p>{{item.descripcion == '' ? 'Descripcion del Producto': item.descripcion}}</p>
+        <p>{{item.id_Categoria == 0 ? 'Sin categoria': item.id_Categoria}}</p>
+        <p>{{item.fecha_creacion | date: 'yyyy-MM-dd'}}</p>
+    </div>
+</div>

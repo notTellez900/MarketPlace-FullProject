@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <p>Nombre de la Categoria</p>
+                    <input type="text" name="nombre" [(ngModel)]="categoria.nombre" placeholder="Nombre del Producto" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <p>Descripcion de la Categoria</p>
+                    <textarea name="descripcion" [(ngModel)]="categoria.descripcion" placeholder="Descripcion del Producto" rows="2" class="form-control"></textarea>
+                </div>
+                <p>Guardar Nueva Categoria</p>
+                <button class="btn btn-success btn-block" (click) = "edit ? updateItem() : saveNewItem()">
+                    GUARDAR
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h3>{{categoria.id}}. {{categoria.nombre == '' ? 'Nombre de la Categoria': categoria.nombre}}</h3>
+        <p>{{categoria.descripcion == '' ? 'Descripcion de la categoria': categoria.descripcion}}</p>
+    </div>
+</div>

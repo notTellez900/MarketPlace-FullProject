@@ -1,0 +1,17 @@
+
+<div class="col-md-4" *ngFor="let item of items">
+    <div class="card text-center">
+        <div class="card-header">
+            {{item.id}} - {{item.nombre}}
+            <button class="btn btn-danger btn-delete" (click)="deleteItem(item.id)"><i class="far fa-trash-alt"></i></button>
+        </div>
+        <div class="card-header card-header-cat">
+            {{item.categoria_nombre}}
+        </div>
+        <img [src]="item.imagen" class="card-img-top">
+        <div class="card-body">
+            <p>{{item.descripcion}}</p>
+            <a [routerLink]="['/items/edit', item.id]" class="btn btn-info btn-edit" >EDIT item</a>
+        </div>
+    </div>
+</div>

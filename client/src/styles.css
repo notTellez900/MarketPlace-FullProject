@@ -1,0 +1,156 @@
+#secondTitle {
+    background-image: url(assets/Girldefault.jpg);
+    color: white;
+    padding: 2% 9%;
+    text-align: center;
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter:grayscale(100%);
+}
+
+.btn-shop {
+    background-color: #2E2D2D;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-shop:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.btn-edit{
+    background-color: #1E37C1; /* Color de fondo */
+    color: white; /* Color de letra blanco */
+    border-radius: 0; /* Bordes cuadrados */
+    border: 1px solid white;
+    width: 100%; /* Ancho del botón */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-edit:hover {
+    background-color: white; /* Color de fondo blanco en hover */
+    border: 1px solid #1E37C1;
+    color: #1E37C1; /* Color de letra en hover */
+}
+
+
+.btn-delete {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Margen superior de 0 */
+    right: 0; /* Margen derecho de 0 */
+    background-color: red; /* Color de fondo */
+    color: white; /* Color de letra blanco */
+    border: none; /* Sin borde */
+    border-radius: 0; /* Sin borde redondeado en la esquina superior derecha */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-delete:hover{
+    background-color: white; /* Cambia el color de fondo en hover */
+    color: red;
+}
+.navbar{
+    padding: 0 0 4.5rem;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-custom{
+    padding: 3% 15%;
+    text-align: right;
+    font-size: 18px;
+}
+
+.img-title {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-20%, -50%);
+    text-align: center;
+}
+
+.img-text{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+    text-align: center;
+}
+.img-title img {
+    width: 80%;
+    height: auto;
+    backdrop-filter: blur(2px);
+    filter: blur(2px) grayscale(100%);
+}
+
+.row {
+    position: relative;
+}
+
+.card-header {
+    background-color: black; /* Color de fondo negro */
+    border-radius: 0; /* Bordes cuadrados */
+    color: white; /* Color de letra blanco */
+}
+
+.card-header-cat {
+    background-color: #2A2A2A;
+    border-radius: 0; /* Bordes cuadrados */
+    color: white; /* Color de letra blanco */
+}
+
+#footer{
+    background-image: url(assets/defaultFooter.jpg);
+    color: white;
+    padding: 2% 9%;
+    text-align: center;
+    height: calc(80vh - 80px); /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    filter:grayscale(100%);
+}
+
+.footer-text{
+    margin-top: 20px;
+    background-color: #2A2A2A;
+    color: white;
+}
+
+.img-footer{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-20%, -50%);
+    text-align: center;
+}
+
+.img-footer img{
+    width: 80%;
+    height: auto;
+    backdrop-filter: blur(2px);
+    filter: blur(2px) grayscale(100%);
+}
+
+.container-footer{
+    max-width: 960px; /* Establece un ancho máximo para el contenido del footer */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}

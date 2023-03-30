@@ -1,0 +1,12 @@
+<div class="col-md-4" *ngFor="let cat of cats">
+    <div class="card text-center">
+        <div class="card-header">
+            {{cat.id}} - {{cat.nombre}}
+            <button class="btn btn-danger btn-delete" (click)="deleteItem(cat.id)"><i class="far fa-trash-alt"></i></button>
+        </div>
+        <div class="card-body">
+            <p>{{cat.descripcion}}</p>
+            <a [routerLink]="['/cats/edit', cat.id]" class="btn btn-info btn-edit" >EDIT item</a>
+        </div>
+    </div>
+</div>
